@@ -26,7 +26,7 @@ class Category:
 
         if isinstance(product, Product):
             self.__products.append(product)
-            Category.category_count += 1
+            Category.product_count += 1
 
     @property
     def products(self) -> str:

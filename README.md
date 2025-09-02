@@ -2,9 +2,14 @@
 
 ## Класс Product
 
+- Добавлен геттер и сеттер price - цена продукта
+- Функция создания экземпляра класса Product из данных о продукте в словаре
+
 
 ## Класс Category
 
 - Категории продуктов
+- функция добавления продукта в категорию
+- Вывод списка продуктов в виде форматированной строки
 
-[Результаты тестирования](https://htmlpreview.github.io/?https://github.com/AndryBorzunov/MyShopProject/blob/feature/homework_14_1/htmlcov/index.html)
+[Результаты тестирования](https://htmlpreview.github.io/?https://github.com/AndryBorzunov/MyShopProject/blob/feature/homework_14_2/htmlcov/index.html)
