@@ -16,4 +16,9 @@
 - Переопределение строкового представления класса -
         выводит имя категории и общее количество продуктов
 
+
+## Класс Iterator
+
+- Реализует итерацию товаров по категориям
+
 [Результаты тестирования](https://htmlpreview.github.io/?https://github.com/AndryBorzunov/MyShopProject/blob/feature/homework_15_1/htmlcov/index.html)
