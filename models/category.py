@@ -30,12 +30,18 @@ class Category:
 
     @property
     def products(self) -> str:
-        """геттер для списка продуктов"""
+        """геттер для списка продуктов (строковое представление)"""
 
         product_str = ""
         for product in self.__products:
             product_str += f"{str(product)}\n"
         return product_str
+
+    @property
+    def products_list(self) -> list[Product]:
+        """геттер для списка продуктов (список объектов)"""
+
+        return self.__products
 
     def __str__(self) -> str:
         """

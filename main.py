@@ -1,5 +1,6 @@
 from models.category import Category
 from models.product import Product
+from models.iterator import Iterator
 
 
 if __name__ == '__main__':
@@ -24,3 +25,7 @@ if __name__ == '__main__':
     print(product1 + product2)
     print(product1 + product3)
     print(product2 + product3)
+
+    category_iterator = Iterator(category1)
+    for item in category_iterator:
+        print(item)
