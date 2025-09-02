@@ -37,11 +37,13 @@ class Category:
             product_str += f"{str(product)}\n"
         return product_str
 
+    def __str__(self) -> str:
+        """
+        Переопределение строкового представления класса -
+        выводит имя категории и общее количество продуктов
+        """
 
-    def __str__(self):
         summa = 0
         for item in self.__products:
             summa += item.quantity
         return f"{self.name}, количество продуктов: {summa} шт."
-
-
