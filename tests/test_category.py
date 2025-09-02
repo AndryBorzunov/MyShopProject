@@ -1,4 +1,5 @@
-import  pytest
+import pytest
+
 from models.category import Category
 from models.product import Product
 
@@ -16,6 +17,20 @@ def category_smartphone(product_sony):
 def test_init(category_smartphone, product_sony):
     assert category_smartphone.name == "Смартфоны"
     assert category_smartphone.description == "Смартфоны как средство коммуникации"
-    assert category_smartphone.products == [product_sony]
+    assert category_smartphone.products == "Sony ZX, 10500 руб. Остаток: 10 шт.\n"
     assert category_smartphone.category_count == 1
     assert category_smartphone.product_count == 1
+
+
+@pytest.fixture
+def product_add():
+    return Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 18000.0, 5)
+
+
+def test_add_product(category_smartphone, product_add):
+    category_smartphone.add_product(product_add)
+    assert category_smartphone.product_count == 1
+    assert (
+        category_smartphone.products
+        == "Sony ZX, 10500 руб. Остаток: 10 шт.\nSamsung Galaxy S23 Ultra, 18000.0 руб. Остаток: 5 шт.\n"
+    )
