@@ -34,3 +34,12 @@ def test_add_product(category_smartphone, product_add):
         category_smartphone.products
         == "Sony ZX, 10500 руб. Остаток: 10 шт.\nSamsung Galaxy S23 Ultra, 18000.0 руб. Остаток: 5 шт.\n"
     )
+
+
+@pytest.fixture
+def str_result():
+    return "Смартфоны, количество продуктов: 10 шт."
+
+
+def test_str(category_smartphone, str_result):
+    assert str(category_smartphone) == str_result

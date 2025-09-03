@@ -47,3 +47,16 @@ class Product:
             )
         else:
             return None
+
+    def __str__(self) -> str:
+        """Переопределение строкового представления класса"""
+
+        return f"{self.name}, {self.__price} руб. Остаток: {self.quantity} шт."
+
+    def __add__(self, other: Any) -> float:
+        """Сложение общей суммы стоимости продуктов при сложении экземпляров класса"""
+
+        if isinstance(other, Product):
+            return self.__price * self.quantity + other.price * other.quantity
+        else:
+            return self.__price * self.quantity

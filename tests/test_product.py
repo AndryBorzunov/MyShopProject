@@ -66,3 +66,21 @@ def test_new_product(data_in, data_output):
 def test_bad_data(data_in, data_output):
     new_product = Product.new_product(data_in)
     assert new_product is None
+
+
+@pytest.fixture
+def str_result():
+    return "Sony ZX, 10500 руб. Остаток: 10 шт."
+
+
+def test_str(product_sony, str_result):
+    assert str(product_sony) == str_result
+
+
+@pytest.fixture
+def product_other():
+    return Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 18000.0, 5)
+
+
+def test_add(product_sony, product_other):
+    assert product_sony + product_other == 195000
