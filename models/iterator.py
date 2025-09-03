@@ -3,7 +3,7 @@ from models.category import Category
 
 class Iterator:
     """Реализует итерацию товаров по категориям"""
-    
+
     __category: Category
 
     def __init__(self, category: Category):

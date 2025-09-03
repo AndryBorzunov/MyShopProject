@@ -1,3 +1,5 @@
+from typing import Any
+
 from models.product import Product
 
 
@@ -21,12 +23,14 @@ class Category:
         Category.category_count += 1
         Category.product_count = len(self.__products)
 
-    def add_product(self, product: Product) -> None:
+    def add_product(self, product: Any) -> None:
         """Добавление нового продукта"""
 
         if isinstance(product, Product):
             self.__products.append(product)
             Category.product_count += 1
+        else:
+            raise TypeError("Попытка добавить объект другого типа")
 
     @property
     def products(self) -> str:
