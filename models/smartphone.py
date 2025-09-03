@@ -2,6 +2,7 @@ from  models.product import Product
 
 
 class Smartphone(Product):
+    """Класс для представления продукта Смартфон"""
 
     efficiency: float    # производительность
     model: str           # модель

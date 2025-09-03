@@ -2,6 +2,7 @@ from models.product import Product
 
 
 class LawnGrass(Product):
+    """Класс для представления продукта Трава газонная"""
 
     country: str
     germination_period: int
