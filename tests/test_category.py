@@ -43,3 +43,8 @@ def str_result():
 
 def test_str(category_smartphone, str_result):
     assert str(category_smartphone) == str_result
+
+
+def test_add_product_error(category_smartphone):
+    with pytest.raises(TypeError, match="Попытка добавить объект другого типа"):
+        category_smartphone.add_product("not product")

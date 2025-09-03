@@ -84,3 +84,8 @@ def product_other():
 
 def test_add(product_sony, product_other):
     assert product_sony + product_other == 195000
+
+
+def test_add_error(product_sony):
+    with pytest.raises(TypeError, match="Попытка сложения объектов разных типов"):
+        product_sony + "not product"
