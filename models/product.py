@@ -1,7 +1,10 @@
 from typing import Any, Dict
 
+from models.baseproduct import BaseProduct
+from models.mixinlog import MixinLog
 
-class Product:
+
+class Product(BaseProduct, MixinLog):
     """Класс для представления продукта"""
 
     name: str  # Наименование продукта
@@ -9,18 +12,17 @@ class Product:
     __price: float  # Стоимость
     quantity: int  # Количество
 
-    def __init__(self, name: str, description: str, price: float, quantity: int):
+    def __init__(self, name: str, description: str, price: float, quantity: int) -> None:
         """Метод для инициализации экземпляра класса"""
 
         self.name = name
         self.description = description
         self.__price = price
         self.quantity = quantity
+        super().__init__()
 
     @property
     def price(self) -> float:
-        """Геттер для аттрибута price"""
-
         return self.__price
 
     @price.setter
