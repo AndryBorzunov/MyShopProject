@@ -53,10 +53,10 @@ class Product:
 
         return f"{self.name}, {self.__price} руб. Остаток: {self.quantity} шт."
 
-    def __add__(self, other: Any) -> float:
+    def __add__(self, other: Any) -> float | Any:
         """Сложение общей суммы стоимости продуктов при сложении экземпляров класса"""
 
-        if isinstance(other, Product):
+        if type(other) is type(self):
             return self.__price * self.quantity + other.price * other.quantity
         else:
-            return self.__price * self.quantity
+            raise TypeError("Попытка сложения объектов разных типов")

@@ -1,8 +1,8 @@
 import pytest
 
 from models.category import Category
-from models.product import Product
 from models.iterator import Iterator
+from models.product import Product
 
 
 @pytest.fixture
@@ -13,6 +13,7 @@ def product_sony():
 @pytest.fixture
 def category_smartphone(product_sony):
     return Category("Смартфоны", "Смартфоны как средство коммуникации", [product_sony])
+
 
 @pytest.fixture
 def str_result():
