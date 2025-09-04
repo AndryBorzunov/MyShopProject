@@ -23,6 +23,7 @@ class Product(BaseProduct, MixinLog):
 
     @property
     def price(self) -> float:
+        """Геттер для аттрибута price"""
         return self.__price
 
     @price.setter
