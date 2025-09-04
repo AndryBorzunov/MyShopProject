@@ -1,6 +1,5 @@
 from models.category import Category
 from models.product import Product
-from models.smartphone import Smartphone
 
 
 if __name__ == '__main__':
