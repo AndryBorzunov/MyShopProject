@@ -30,4 +30,17 @@
 - Являются наследниками класса Product
 - Содержат дополнительные аттрибуты
 
-[Результаты тестирования](https://htmlpreview.github.io/?https://github.com/AndryBorzunov/MyShopProject/blob/feature/homework_16_1/htmlcov/index.html)
+
+## Абстрактный класс BaseProduct
+
+- Предназначен для создания классов продуктов
+- Содержит в себе общие свойства и методы
+
+
+## Класс-миксин MixinLog
+
+- При создании объекта, то есть при работе метода __init__,
+печатает в консоль информацию о том, от какого класса и с какими параметрами был создан объект.
+
+
+[Результаты тестирования](https://htmlpreview.github.io/?https://github.com/AndryBorzunov/MyShopProject/blob/feature/homework_16_2/htmlcov/index.html)
