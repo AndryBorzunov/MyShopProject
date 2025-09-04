@@ -43,4 +43,4 @@
 печатает в консоль информацию о том, от какого класса и с какими параметрами был создан объект.
 
 
-[Результаты тестирования](https://htmlpreview.github.io/?https://github.com/AndryBorzunov/MyShopProject/blob/feature/homework_16_2/htmlcov/index.html)
+[Результаты тестирования](https://htmlpreview.github.io/?https://github.com/AndryBorzunov/MyShopProject/blob/homework_16_2/htmlcov/index.html)
