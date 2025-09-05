@@ -1,3 +1,5 @@
+from typing import Any
+
 from models.category import Category
 
 
@@ -10,7 +12,7 @@ class Iterator:
         self.__category = category
         self.current = 0
 
-    def __iter__(self):
+    def __iter__(self) -> Any:
         return self
 
     def __next__(self) -> str:
