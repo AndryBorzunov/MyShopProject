@@ -48,3 +48,21 @@ def test_str(category_smartphone, str_result):
 def test_add_product_error(category_smartphone):
     with pytest.raises(TypeError, match="Попытка добавить объект другого типа"):
         category_smartphone.add_product("not product")
+
+
+@pytest.fixture
+def category_full(product_sony, product_add):
+    return Category("Смартфоны", "Смартфоны как средство коммуникации", [product_sony, product_add])
+
+
+def test_middle_price(category_full):
+    assert category_full.middle_price() == 14250.0
+
+
+@pytest.fixture
+def category_empty():
+    return Category("Смартфоны", "Смартфоны как средство коммуникации", [])
+
+
+def test_middle_price_empty(category_empty):
+    assert category_empty.middle_price() == 0

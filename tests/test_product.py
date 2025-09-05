@@ -89,3 +89,8 @@ def test_add(product_sony, product_other):
 def test_add_error(product_sony):
     with pytest.raises(TypeError, match="Попытка сложения объектов разных типов"):
         product_sony + "not product"
+
+
+def test_init_error():
+    with pytest.raises(ValueError, match="Товар с нулевым количеством не может быть добавлен"):
+        Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 18000.0, 0)
